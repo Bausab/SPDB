@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spirit |Nepal </title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="/Spiritnepal/assets/css/login.css" />
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+
+    
+  <script>
+    function login() {
+      // Get the username and password values
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+
+      // Check if the username and password are valid
+      if (username === 'Admin' && password === '123456') {
+        // Set the user as logged in
+        sessionStorage.setItem('loggedIn', true);
+        alert('Welcome Admin!');
+        window.location.href = 'index.html'; // Redirect to the home page
+      } else {
+        alert('Herera Han Ramro Sanga');
+      }
+    }
+
+    function logout() {
+      // Remove the logged in status
+      sessionStorage.removeItem('loggedIn');
+      alert('Logged out successfully!');
+      window.location.href = 'lg.html'; // Redirect to the login page
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <h1>Welcome Admin !!</h1>
+
+    <div class="submit">
+      <div class="login_form">
+        <h2>Login</h2>
+        <div class="input_group">
+          <i class="fa fa-user"></i>
+          <label for="username">Username:</label>
+    <input type="text" id="username" placeholder='Username'name="username" required><br><br>
+    
+    <div class="input_group">
+      <i class="fa fa-lock"></i>
+    <label for="password">Password:</label>
+    <input type="password" id="password"
+    placeholder='password'name="password" required><br><br>
+
+    <input type="button" value="Login" onclick="login()">
+       </div>
+
+    </div>
+   
+    <div class="fotter">
+      <a href="#">Forgot Password?</a>
+      <a href="signup.html">Signup</a>
+    </div>
+  </div>
+</div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>
